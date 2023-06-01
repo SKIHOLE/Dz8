@@ -12,8 +12,6 @@ namespace Dz8._5
         {
             Console.WriteLine("Введіть дату народження (у форматі ДД.ММ.РРРР):");
             string input = Console.ReadLine();
-
-            // Парсимо введену дату
             if (DateTime.TryParse(input, out DateTime birthday))
             {
                 DateTime currentDate = DateTime.Today;
@@ -23,9 +21,9 @@ namespace Dz8._5
                     nextBirthday = nextBirthday.AddYears(1);
                 }
                 int daysUntilNextBirthday = (nextBirthday - currentDate).Days;
-
                 Console.WriteLine("Кількість днів до наступного дня народження: " + daysUntilNextBirthday);
             }
+
             else
             {
                 Console.WriteLine("Неправильний формат дати!");
